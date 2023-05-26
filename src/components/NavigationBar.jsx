@@ -7,13 +7,6 @@ const NavigationBar = ({ hideMyPageButton }) => {
 	const [showSearch, setShowSearch] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
 
-	const handleHome = () => {
-		navigate("/");
-	};
-
-	const handleSearchClick = () => {
-		setShowSearch(!showSearch);
-	};
 	const handleSearchSubmit = (e) => {
 		e.preventDefault();
 		navigate(`/search/${searchQuery}`);

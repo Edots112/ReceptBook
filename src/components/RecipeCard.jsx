@@ -4,7 +4,6 @@ import NutritionInfo from "./NutritionInfo";
 import ExpandableList from "./ExpandableList";
 
 const RecipeCard = ({ recipe, isSavedPage, setSavedRecipes, isGrid }) => {
-	const [servingSize, setServingSize] = useState(recipe.yield);
 	const [isSaved, setIsSaved] = useState(false);
 	const [isExpanded, setIsExpanded] = useState(false);
 
@@ -104,10 +103,7 @@ const RecipeCard = ({ recipe, isSavedPage, setSavedRecipes, isGrid }) => {
 						/>
 						<div className='mt-4 bg-light p-3 rounded '>
 							<h4 className='mb-3'>Nutrition Facts</h4>
-							<NutritionInfo
-								recipe={recipe}
-								servingSize={Number(servingSize)}
-							/>
+							<NutritionInfo recipe={recipe} />
 						</div>
 					</Card.Text>
 				</Card.Body>
