@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Button, Container } from "react-bootstrap";
@@ -15,7 +15,9 @@ const RecipeList = () => {
 	const appId = process.env.REACT_APP_EDAMAM_APP_ID;
 	const appKey = process.env.REACT_APP_EDAMAM_APP_KEY;
 
-	const fetchRecipes = () => {
+	const fetchRecipes = useRef(() => {});
+
+	fetchRecipes.current = () => {
 		axios
 			.get(
 				`https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=${page}&to=${
@@ -33,13 +35,14 @@ const RecipeList = () => {
 	useEffect(() => {
 		setPage(0);
 		setRecipes([]);
+		fetchRecipes.current();
 	}, [query]);
 
 	const handleNext = () => {
 		if (currentIndex < recipes.length - 1) {
 			setCurrentIndex(currentIndex + 1);
 		} else {
-			fetchRecipes();
+			fetchRecipes.current();
 		}
 		setIsExpanded(false);
 	};
