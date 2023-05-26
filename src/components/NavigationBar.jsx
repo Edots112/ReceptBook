@@ -4,14 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const NavigationBar = ({ hideMyPageButton }) => {
 	const navigate = useNavigate();
-	const [showSearch, setShowSearch] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const handleSearchSubmit = (e) => {
 		e.preventDefault();
 		navigate(`/search/${searchQuery}`);
 		setSearchQuery("");
-		setShowSearch(false);
 	};
 
 	return (

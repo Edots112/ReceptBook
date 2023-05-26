@@ -102,7 +102,7 @@ const RecipeCard = ({ recipe, isSavedPage, setSavedRecipes, isGrid }) => {
 							setIsExpanded={setIsExpanded}
 						/>
 						<div className='mt-4 bg-light p-3 rounded '>
-							<h4 className='mb-3'>Nutrition Facts</h4>
+							<Card.Title>Nutrition Facts</Card.Title>
 							<NutritionInfo recipe={recipe} />
 						</div>
 					</Card.Text>
