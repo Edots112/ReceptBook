@@ -33,7 +33,6 @@ const RecipeList = () => {
 	useEffect(() => {
 		setPage(0);
 		setRecipes([]);
-		fetchRecipes();
 	}, [query]);
 
 	const handleNext = () => {
