@@ -21,7 +21,7 @@ const MyPage = ({ hideMyPageButton }) => {
 							key={index}
 							sm={12}
 							md={6}
-							lg={4}>
+							lg={6}>
 							<RecipeCard
 								recipe={recipe}
 								isSavedPage={true}
