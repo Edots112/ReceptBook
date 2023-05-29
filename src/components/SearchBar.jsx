@@ -47,6 +47,11 @@ const SearchBar = () => {
 					Search
 				</Button>
 			</Form>
+			<Button
+				className='fixed-bottom w-25 m-5 p-3 mx-auto d-block'
+				href='/my-page'>
+				My page
+			</Button>
 		</div>
 	);
 };
