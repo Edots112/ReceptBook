@@ -12,6 +12,8 @@ const SearchBar = () => {
 		navigate(`/search/${query}`);
 	};
 
+	//TODO Make message if no saved recipes
+
 	return (
 		<div
 			style={{

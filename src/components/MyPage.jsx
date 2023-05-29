@@ -11,6 +11,7 @@ const MyPage = ({ hideMyPageButton }) => {
 		setSavedRecipes(savedRecipes);
 	}, []);
 
+	//TODO Make message if no saved recipes
 	return (
 		<>
 			<NavigationBar hideMyPageButton={true} />

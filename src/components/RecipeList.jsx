@@ -54,6 +54,9 @@ const RecipeList = () => {
 		setIsExpanded(false);
 	};
 
+	//TODO Make Loading... fancy
+	// TODO Make message if no recipes
+
 	const recipe = recipes[currentIndex];
 
 	if (!recipe) return <p>Loading...</p>;
